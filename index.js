@@ -8,6 +8,7 @@ import {
   dividirPropinas,
   pagarPropinas,
   recuperarEfectivoCaja,
+  capturarPagos
 } from "./controllers/propinasController.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -22,6 +23,7 @@ app.use(express.json());
 
 app.get("/efectivo-caja", recuperarEfectivoCaja);
 app.post("/propinas/capturar", capturarPropinas);
+app.post("/propinas/pagos", capturarPagos);
 app.post("/propinas/dividir", dividirPropinas);
 app.post("/propinas/pagar", pagarPropinas);
 

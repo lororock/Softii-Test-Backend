@@ -16,6 +16,12 @@ export const capturarPropinas = (req, res) => {
   res.json({ message: "Monto total de propinas capturado exitosamente" });
 };
 
+export const capturarPagos = (req, res) => {
+  const { paymentType, value } = req.body;
+  pagos.push({ paymentType, value, id: pagos.length + 1 }); // Agregar el pago al arreglo de pagos
+  res.json({ pagos });
+};
+
 // Controlador para decidir la división de propinas
 export const dividirPropinas = (req, res) => {
   const { dividir } = req.body;
