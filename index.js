@@ -7,7 +7,6 @@ import {
   recuperarEfectivoCaja,
   capturarPagos,
   eliminarPago,
-  pagarPropinas,
 } from "./controllers/propinasController.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -23,7 +22,6 @@ app.use(express.json());
 app.get("/efectivo-caja", recuperarEfectivoCaja);
 app.post("/propinas/pagos", capturarPagos);
 app.delete("/propinas/eliminar:id", eliminarPago);
-app.post("/propinas/pagar", pagarPropinas);
 
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`);
