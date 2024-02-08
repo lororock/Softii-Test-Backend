@@ -1,7 +1,6 @@
 
 let totalPropinas = 0
 const efectivoCaja = 5500
-const metodoPago = 'tarjeta';
 const pagos = []
 
 // recuperar datos
@@ -12,7 +11,7 @@ export const recuperarEfectivoCaja = (req, res) => {
 // agregar pago
 export const capturarPagos = (req, res) => {
   const { paymentType, value } = req.body;
-  pagos.push({ paymentType, value, id: pagos.length + 1 }); // Agregar el pago al arreglo de pagos
+  pagos.push({ paymentType, value, id: pagos.length + 1 });
   res.json({ pagos });
 };
 
